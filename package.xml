@@ -10,7 +10,9 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
   <depend>joint_state_publisher</depend>
   <depend>robot_state_publisher</depend>
-  <depend>gazebo</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_image</depend>
+  <depend>ros_gz_sim</depend>
   <depend>xacro</depend>
   <depend>rclcpp</depend>
   <depend>geometry_msgs</depend>
