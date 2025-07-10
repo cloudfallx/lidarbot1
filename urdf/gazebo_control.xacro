@@ -9,7 +9,6 @@
             <wheel_separation>0.4</wheel_separation>
             <wheel_radius>0.1</wheel_radius>
 
-            <!-- <max_wheel_torque>200</max_wheel_torque> -->
             <max_linear_acceleration>0.33</max_linear_acceleration>
 
             <frame_id>odom</frame_id>

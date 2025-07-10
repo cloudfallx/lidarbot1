@@ -1,4 +1,3 @@
-
 import os
 
 from launch import LaunchDescription
@@ -23,14 +22,15 @@ def generate_launch_description():
         description='Full path to the ROS2 parameters file to use for the slam_toolbox node')
 
     start_localization_slam_toolbox_node = Node(
-        parameters=[
-          slam_params_file,
-          {'use_sim_time': use_sim_time}
-        ],
         package='slam_toolbox',
         executable='localization_slam_toolbox_node',
         name='slam_toolbox',
-        output='screen')
+        output='screen',
+        parameters=[
+            os.path.join(get_package_share_directory("lidarbot1"), 'config', 'mapper_params_localization.yaml'),
+            {'use_sim_time': use_sim_time}
+        ]
+    )
 
     ld = LaunchDescription()
 

@@ -27,10 +27,10 @@ def generate_launch_description():  # Parameter with default True for Gazebo
             output='screen'
         ),
 
-        # Joint State Publisher
-        Node(
-            package='joint_state_publisher',
-            executable='joint_state_publisher',
-            parameters=[{'use_sim_time': use_sim_time}] 
-        )
+        # # Joint State Publisher
+        # Node(
+        #     package='joint_state_publisher',
+        #     executable='joint_state_publisher',
+        #     parameters=[{'use_sim_time': use_sim_time}] 
+        # )
     ])
