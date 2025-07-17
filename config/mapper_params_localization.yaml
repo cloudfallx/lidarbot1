@@ -12,11 +12,11 @@ slam_toolbox:
     map_frame: map
     base_frame: base_footprint
     scan_topic: /scan
-    mode: localization
+    mode: mapping
 
     # if you'd like to start localizing on bringup in a map and pose
-    map_file_name: /home/user/ros2_ws/src/lidarbot1/maps/map3_ser
-    map_start_pose: [0.0, 0.0, 0.0]
+    # map_file_name: /home/user/ros2_ws/src/lidarbot1/maps/map3_ser
+    # map_start_pose: [0.0, 0.0, 0.0]
 
     debug_logging: false
     throttle_scans: 1
