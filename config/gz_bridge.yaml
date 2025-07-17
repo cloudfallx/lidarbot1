@@ -8,7 +8,7 @@
   gz_topic_name: "scan"
   ros_type_name: "sensor_msgs/msg/LaserScan"
   gz_type_name: "gz.msgs.LaserScan"
-  direction: GZ_TO_ROS
+  direction: ROS_TO_GZ
 
 - ros_topic_name: "camera/camera_info"
   gz_topic_name: "camera/camera_info"
@@ -35,7 +35,12 @@
   direction: ROS_TO_GZ
 
 - ros_topic_name: "joint_states"
-  gz_topic_name: "joint_states"
   ros_type_name: "sensor_msgs/msg/JointState"
   gz_type_name: "gz.msgs.Model"
   direction: GZ_TO_ROS
+
+- ros_topic_name: "robot_description"
+  ros_type_name: "std_msgs/msg/String"
+  gz_type_name: "gz.msgs.StringMsg"
+  direction: ROS_TO_GZ
+

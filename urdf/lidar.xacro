@@ -29,30 +29,37 @@
 
     
     <gazebo reference="lidar_link">
-        <material>Gazebo/Red</material>
-        <sensor name="laser" type="gpu_lidar">
-            <pose>0 0 0 0 0 0</pose>
-            <visualize>false</visualize>
-            <update_rate>100</update_rate>
-            <lidar>
-                <scan>
-                    <horizontal>
-                        <samples>360</samples>
-                        <resolution>1</resolution>
-                        <min_angle>-3.14</min_angle>
-                        <max_angle>3.14</max_angle>
-                    </horizontal>
-                </scan>
-                <range>
-                    <min>0.3</min>
-                    <max>12</max>
-                    <resolution>0.01</resolution>
-                </range>
-            </lidar>
-            <topic>scan</topic>
-            <gz_frame_id>lidar_link</gz_frame_id>
-        </sensor>
-
+    <sensor name="laser" type="gpu_lidar">
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>true</visualize>
+        <update_rate>100</update_rate>
+        <gpu_lidar>
+        <scan>
+            <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
+            </horizontal>
+        </scan>
+        <range>
+            <min>0.3</min>
+            <max>12</max>
+            <resolution>0.01</resolution>
+        </range>
+        </gpu_lidar>
+        <topic>scan</topic>
+        <always_on>true</always_on>
+        <enabled>true</enabled>
+    </sensor>
     </gazebo>
+
+
+    <plugin
+      filename="ignition-gazebo-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
 
 </robot>
